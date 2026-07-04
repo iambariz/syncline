@@ -1,0 +1,31 @@
+[project]
+name = "syncline"
+version = "0.1.0"
+description = "Desc"
+readme = "README.md"
+authors = [
+    { name = "David Barkanyi", email = "dmbarkanyi@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.139.0",
+    "httpx>=0.28.1",
+    "pydantic>=2",
+    "pydantic-settings>=2.14.2",
+    "uvicorn>=0.50.0",
+]
+
+[project.scripts]
+syncline = "syncline:main"
+
+[build-system]
+requires = ["uv_build>=0.11.26,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "mypy>=2.1.0",
+    "pytest>=9.1.1",
+    "respx>=0.23.1",
+    "ruff>=0.15.20",
+]
