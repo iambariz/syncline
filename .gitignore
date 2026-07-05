@@ -1,0 +1,19 @@
+# Environment / secrets — never commit tokens
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Tooling caches
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# Editors
+.idea/
+.vscode/
+
+# Notes
+notes/

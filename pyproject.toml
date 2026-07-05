@@ -1,7 +1,7 @@
 [project]
 name = "syncline"
 version = "0.1.0"
-description = "Desc"
+description = "Schema migration engine for HubSpot portals: versioned, checksummed migrations generated from schema diffs"
 readme = "README.md"
 authors = [
     { name = "David Barkanyi", email = "dmbarkanyi@gmail.com" }
@@ -29,3 +29,17 @@ dev = [
     "respx>=0.23.1",
     "ruff>=0.15.20",
 ]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.mypy]
+strict = true
+plugins = ["pydantic.mypy"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
