@@ -11,9 +11,10 @@ __pycache__/
 .pytest_cache/
 .ruff_cache/
 
-# Editors
+# Editors — .vscode/settings.json is committed deliberately (shared toolchain config)
 .idea/
-.vscode/
+.vscode/*
+!.vscode/settings.json
 
 # Notes
 notes/
